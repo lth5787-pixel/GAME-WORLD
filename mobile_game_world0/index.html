@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="게임과 애니메이션을 한곳에서 만나는 GAME ANIME 공간">
+  <title>GAME ANIME | 게임 애니</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home">GAME <span>ANIME</span> 배타</a>
+    <nav aria-label="주 메뉴">
+      <a href="#home">홈</a>
+      <a href="#choose">카테고리</a>
+      <a href="#about">사이트 소개</a>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">WELCOME TO MY WORLD</p>
+        <h1>좋아하는 세계를<br><span>마음껏 즐겨봐!</span></h1>
+        <p class="intro">게임 소식부터 애니메이션 이야기까지<br>내가 좋아하는 콘텐츠를 한곳에서 만나보세요.</p>
+        <a class="start-link" href="#choose">둘러보기 <span>→</span></a>
+      </div>
+      <div class="hero-decoration" aria-hidden="true">
+        <span class="sparkle s1">✦</span><span class="sparkle s2">✧</span>
+        <span class="circle c1"></span><span class="circle c2"></span>
+        <div class="mini-card">GAME<br><b>&</b><br>ANIME</div>
+      </div>
+    </section>
+
+    <section class="choose-section" id="choose">
+      <div class="section-title">
+        <p class="eyebrow">CHOOSE YOUR CATEGORY</p>
+        <h2>어떤 콘텐츠를 볼까요?</h2>
+        <p>원하는 로고 버튼을 눌러 메뉴를 선택해 주세요.</p>
+      </div>
+      <div class="category-buttons">
+        <button class="category-button game-button" data-target="game-panel" aria-controls="game-panel" aria-pressed="true">
+          <span class="logo-wrap"><img src="images/game_logo.png" alt="GAME 게임 로고"></span>
+          <span class="button-caption">게임 세계로 들어가기 <b>→</b></span>
+        </button>
+        <button class="category-button anime-button" data-target="anime-panel" aria-controls="anime-panel" aria-pressed="false">
+          <span class="logo-wrap"><img src="images/anime_logo.png" alt="ANIME 애니 로고"></span>
+          <span class="button-caption">애니 세계로 들어가기 <b>→</b></span>
+        </button>
+      </div>
+
+      <section id="game-panel" class="content-panel game-panel active" aria-live="polite">
+        <div class="panel-heading"><span class="panel-icon">Ｇ</span><div><p>GAME CATEGORY</p><h3>게임 공간</h3></div></div>
+        <div class="content-cards">
+          <article class="content-card"><span class="card-number">01</span><h4>게임 소개</h4><p>좋아하는 게임의 세계관과 캐릭터를 소개해 보세요.</p><span class="card-tag">GAME INFO</span></article>
+          <article class="content-card"><span class="card-number">02</span><h4>게임 소식</h4><p>업데이트와 이벤트, 새로운 소식을 모아보세요.</p><span class="card-tag">NEWS</span></article>
+          <article class="content-card"><span class="card-number">03</span><h4>게임 추천</h4><p>재미있게 즐긴 게임을 다른 사람에게 추천해 보세요.</p><span class="card-tag">RECOMMEND</span></article>
+          <a id="c1" href="index1.html">바로가기</a>
+        </div>
+      </section>
+
+      <section id="anime-panel" class="content-panel anime-panel" aria-live="polite">
+        <div class="panel-heading"><span class="panel-icon">Ａ</span><div><p>ANIME CATEGORY</p><h3>애니 공간</h3></div></div>
+        <div class="content-cards">
+          <article class="content-card"><span class="card-number">01</span><h4>애니 소개</h4><p>작품의 줄거리와 등장인물, 장르를 정리해 보세요.</p><span class="card-tag">ANIME INFO</span></article>
+          <article class="content-card"><span class="card-number">02</span><h4>애니 소식</h4><p>신작 애니와 방영 소식을 확인하는 공간입니다.</p><span class="card-tag">NEWS</span></article>
+          <article class="content-card"><span class="card-number">03</span><h4>애니 추천</h4><p>좋아하는 작품과 감상평을 함께 나눠보세요.</p><span class="card-tag">RECOMMEND</span></article>
+          <a id="c2" href="index2.html">바로가기</a>
+        </div>
+      </section>
+    </section>
+
+    <section class="about-section" id="about">
+      <p class="eyebrow">ABOUT THIS SITE</p>
+      <h2>GAME <span>×</span> ANIME</h2>
+      <p>게임과 애니메이션을 좋아하는 사람들을 위한 작은 콘텐츠 공간입니다. <br>
+      f11누를시거나 전체화면 모드에서 이용하시면 더 편하게 보실 수 있습니다. <br>
+      즐거운 취미 생활을 함께해요.</p>
+      </p>
+    </section>
+  </main>
+  <footer>© 2026 GAME ANIME. 즐거운 취미 생활을 함께해요.</footer>
+  <script src="script.js"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta name="apple-mobile-web-app-title" content="GAME WORLD" />
+
+</body>
+</html>
+

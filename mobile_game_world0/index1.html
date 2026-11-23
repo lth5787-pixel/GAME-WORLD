@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101426">
+  <meta name="description" content="Android와 iOS 모바일 게임을 검색하고 취향에 맞는 게임을 찾아보세요.">
+  <title>MOBILE GAME WORLD</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style1.css">
+</head>
+
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="MOBILE GAME WORLD 홈">
+      <span class="brand-mark">MG</span>
+      <span>MOBILE GAME <b>WORLD</b> 배타</span>
+    </a>
+    <nav><a href="#games">게임 탐색</a><a href="#recommend">랜덤 추천</a><a href="#about">사이트 안내</a></nav>
+    <button class="favorite-nav" id="showFavorites">♡ 즐겨찾기 <span id="favoriteCount">0</span></button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow"><i></i> YOUR NEXT GAME STARTS HERE</span>
+        <h1>다음 플레이,<br><em>여기서 찾아보세요.</em></h1>
+        <p>Android와 iOS 모바일 게임을 한곳에서 비교하고<br class="desktop-only"> 취향에 맞는 새로운 게임을 발견하세요.</p>
+        <a class="hero-cta" href="#games">게임 둘러보기 <span>↘</span></a>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="gamepad">🎮</div>
+        <div class="float-chip chip-a">ANDROID</div>
+        <div class="float-chip chip-b">iOS</div>
+        <div class="spark spark-a">✦</div>
+        <div class="spark spark-b">✧</div>
+      </div>
+      <div class="hero-bottom"><span>DISCOVER · COMPARE · PLAY</span><span>ANDROID + iOS</span></div>
+    </section>
+
+    <section class="stats" aria-label="사이트 안내">
+      <div><strong id="totalGames">210</strong><span>등록된 게임</span></div>
+      <div><strong>02</strong><span>모바일 플랫폼</span></div>
+      <div><strong>∞</strong><span>새로운 플레이</span></div>
+    </section>
+
+    <section class="games-section" id="games">
+      <div class="section-heading">
+        <div><span class="eyebrow">GAME LIBRARY</span>
+          <h2>모바일 게임 탐색</h2>
+          <p>원하는 조건을 선택해 게임을 찾아보세요.</p>
+            <button class="random-button" id="randomButton">✦ 랜덤 게임 추천</button>
+        </div>
+      
+      </div>
+
+      <div class="search-row">
+        <label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="게임 이름 또는 장르 검색..."
+            autocomplete="off"><kbd>검색</kbd></label>
+        <select id="sortSelect" aria-label="정렬 방식">
+          <option value="popular">인기순</option>
+          <option value="rating">평점 높은 순</option>
+          <option value="newest">출시일 최신순</option>
+          <option value="name">이름순</option>
+        </select>
+      </div>
+
+      <div class="filter-area">
+        <div class="filter-group"><span class="filter-label">플랫폼</span>
+          <div class="pills" id="platformFilters">
+            <button class="pill active" data-platform="all">전체</button><button class="pill"
+              data-platform="Android">Android</button><button class="pill" data-platform="iOS">iOS</button><button
+              class="pill" data-platform="both">동시 지원</button>
+          </div>
+        </div>
+        <div class="filter-group"><span class="filter-label">장르</span>
+          <div class="pills" id="genreFilters">
+            <button class="pill active" data-genre="all">전체 장르</button><button class="pill"
+              data-genre="RPG">RPG</button><button class="pill" data-genre="액션">액션</button><button class="pill"
+              data-genre="수집형">수집형</button><button class="pill" data-genre="캐주얼">캐주얼</button><button class="pill"
+              data-genre="전략">전략</button><button class="pill" data-genre="샌드박스">샌드박스</button><button class="pill"
+              data-genre="퍼즐">퍼즐</button><button class="pill" data-genre="시뮬레이션">시뮬레이션</button><button class="pill"
+              data-genre="스포츠">스포츠</button><button class="pill" data-genre="레이싱">레이싱</button><button class="pill"
+              data-genre="음악">음악</button><button class="pill" data-genre="보드">보드</button><button class="pill"
+              data-genre="카드">카드</button><button class="pill" data-genre="어드벤처">어드벤처</button><button class="pill"
+              data-genre="로그라이크">로그라이크</button><button class="pill" data-genre="공포">공포</button><button class="pill"
+              data-genre="생존">생존</button><button class="pill" data-genre="리듬">리듬</button><button class="pill"
+              data-genre="아케이드">아케이드</button><button class="pill" data-genre="교육">교육</button>
+          </div>
+        </div>
+        <div class="filter-group"><span class="filter-label">가격</span>
+          <div class="pills" id="priceFilters"><button class="pill active" data-price="all">전체</button><button
+              class="pill" data-price="무료">무료</button><button class="pill" data-price="유료">유료</button></div>
+        </div>
+      </div>
+
+      <div class="results-line"><span id="resultCount">10개 게임</span><button id="resetFilters">필터 초기화 ↺</button></div>
+      <div class="game-grid" id="gameGrid"></div>
+      <div class="empty-state" id="emptyState" hidden><span>🕹️</span>
+        <h3>검색 결과가 없어요.</h3>
+        <p>검색어나 필터를 변경해 보세요.</p>
+      </div>
+    </section>
+
+    <section class="recommend-section" id="recommend">
+      <div><span class="eyebrow">CAN'T DECIDE?</span>
+      
+        <p>랜덤 추천 버튼을 눌러 새로운 게임을 만나보세요.</p>
+      </div>
+      <button class="random-button light" id="randomButtonBottom">오늘의 게임 뽑기 <span>✦</span></button> <a href="https://discord.com/channels/1569603484519759953/1569611249510252636">개시판</a><a href="index.html">나가기</a>
+    </section>
+
+    <section class="about-section" id="about">
+      <span class="eyebrow">ABOUT MGW</span>
+      <h2>게임 선택을 더 쉽게.</h2>
+      <p>게임 정보와 설치 경로를 모아둔 모바일 게임 탐색 페이지입니다.<br>스토어에서 기기 및 지역별 설치 가능 여부를 최종 확인하세요.</p>
+    </section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="#"><span class="brand-mark">MG</span><span>MOBILE GAME
+        <b>WORLD</b></span></a><span>© 2026 MOBILE GAME WORLD · Fan-made game discovery page</span></footer>
+
+  <div class="modal-backdrop" id="modalBackdrop" hidden>
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="닫기">×</button>
+      <div id="modalContent"></div>
+    </section>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script1.js"></script>
+  <div class="game-card">
+
+</div>
+</body>
+
+</html>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta name="apple-mobile-web-app-title" content="GAME WORLD" />
+
